@@ -18,7 +18,7 @@ int main() {
     
     cin >> x;
 
-//while {
+  
     if ( x == 0 ) { 
         cout << "See you next time" << endl;
         return 0;
@@ -43,7 +43,6 @@ int main() {
         cout << "Please, enter over $500, and try one more time." << endl;
         cout << "Enter your money : ";
         cin  >> y;
-        
     }
 
     cout << "You bet $" << y << endl;
@@ -55,7 +54,7 @@ int main() {
         cout << "You are cashing out. Bye" << endl;
         return 0;
     } 
-        else if (a>1) {
+        else if ( a > 1) {
 
         cout << "You are cashing out. Bye" << endl;
         return 0;    
@@ -70,16 +69,37 @@ int main() {
     if (a == random) {
         cout << "Congraturations! You Win! " << 
                 "You got $" << y*2 << "." << endl;
-        cout << "Do you want to paly more? If yes, put 1. If no, put 0." << endl;
-        cin >> x;
+        cout << "Do you still have money to bet?" << endl;
+        cout << "If yes, put 1. If no, put 0." << endl;
+        int b;
+        cin >> b;
+
+        if ( b == 1) {
+            return main();
+        }
         
+        else {
+            cout << "See you next time" << endl;
+            return 0;        
+        }
     }
+
     else {
-        cout << "I'm sorry. You lost $" << y << 
-                "See you next time" << endl;
-        
+        cout << "Sorry. You lost $" << y << "." << endl;
+        cout << "Do you still have money to bet?" << endl;
+        cout << "If yes, put 1. If no, put 0." << endl;
+        int x;
+        cin >> x;
+
+        if ( x == 1) {
+            return main();
+        }
+        else {
+            cout << "See you next time" << endl;
+            return 0;        
+        }
     }
-//return x;
-//}
+
     return 0;
+ 
 }
