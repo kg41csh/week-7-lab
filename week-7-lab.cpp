@@ -18,8 +18,8 @@ int main() {
     
     cin >> x;
 
-
-    if ( x == 0 ){ 
+//while {
+    if ( x == 0 ) { 
         cout << "See you next time" << endl;
         return 0;
         }
@@ -47,8 +47,19 @@ int main() {
     }
 
     cout << "You bet $" << y << endl;
-    cout << "Please, choose Number 1 or 0"   << endl;
+    cout << "Please, choose either Number 1 or 0"   << endl;
     cin  >> a;
+
+    if (a < 0 ) {
+
+        cout << "You are cashing out. Bye" << endl;
+        return 0;
+    } 
+        else if (a>1) {
+
+        cout << "You are cashing out. Bye" << endl;
+        return 0;    
+        }
     
     srand( time(NULL) );
     // Picks either 0 or 1 randomly with equal probablilty	
@@ -59,12 +70,16 @@ int main() {
     if (a == random) {
         cout << "Congraturations! You Win! " << 
                 "You got $" << y*2 << "." << endl;
+        cout << "Do you want to paly more? If yes, put 1. If no, put 0." << endl;
+        cin >> x;
         
     }
     else {
-        cout << "I'm sorry. You Lose! See you next time" << endl;
+        cout << "I'm sorry. You lost $" << y << 
+                "See you next time" << endl;
         
     }
-
+//return x;
+//}
     return 0;
 }
