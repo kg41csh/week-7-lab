@@ -10,7 +10,7 @@ int main() {
     int x;
 
     cout << "*********************************************" << endl;
-    cout << "WELCOME! WELCOME! TO VISIT OUR ONLINE CASINO"  << "\n";
+    cout << "WELCOME! WELCOME! TO VISIT OUR ONLINE CASINO"  << endl;
     cout << "*********************************************" << endl;
     
     cout << "Do you want to play the game?"<< endl;
@@ -26,25 +26,11 @@ int main() {
         cout << "Let's start game!" << endl;  
     }
 
-      
-    cout << "Please, choose 1 or 0" << endl;
-    cin >> x;
-
-    if ( x > 1 ) { 
-        cout << "You are cashing out" << endl;
-    }    
-        else if ( x < 0) {
-        cout << "You are cashing out" << endl;
-        return 0;    
-        }
-    
-    else {
-        cout << "You chose : " << x << endl;
-    }    
     cout << "You should bet minimum $500 at a time." << endl;
     cout << "If you are corret, you can get double." << endl;
-    cout << "How much do you want to bet?" << endl;
-    cout << "Enter your money to bet : ";
+    cout << "If not, you will loose money."          << endl;
+    cout << "How much do you want to bet?"           << endl;
+    cout << "Enter your money to bet : "                    ;
     
     int y;
 
@@ -53,14 +39,35 @@ int main() {
     while ( y > 500) {    }
 
 
+   
+    cout << "Please, choose 1 or 0"   << endl;
+    cin  >> x;
+
+    if ( x > 1 ) { 
+        cout << "It is wrony way. Please, choose 1 or 0" << endl;
+    }    
+        else if ( x < 0) {
+        cout << "It is wrony way. Please, choose 1 or 0" << endl;
+        return 0;    
+        }
+    
+    else {
+        cout << "You chose : " <<  x  << endl;
+    }    
 
     srand( time(NULL) );
     // Picks either 0 or 1 randomly with equal probablilty	
     int random = rand() % 2;
-    cout << random;
+    cout << "Your number is " << x << "." << 
+            "Random number is " << random << ".";
  
-    if (x == 1)
-
+    if (x == random) {
+        cout << "Congraturations! You Win!" << endl;
+        return 0;
+    }
+    else {
+        
+    }
 
     return 0;
 }
