@@ -13,7 +13,7 @@ int main() {
     cout << "WELCOME! WELCOME! TO VISIT OUR ONLINE CASINO"  << endl;
     cout << "*********************************************" << endl;
     
-    cout << "Do you want to play the game?"<< endl;
+    cout << "Do you want to play game?"<< endl;
     cout << "If yes, put 1. If no, put 0." << endl;
     
     cin >> x;
@@ -30,7 +30,7 @@ int main() {
 
     cout << "You should bet minimum $500 at a time." << endl;
     cout << "If you are corret, you can get double." << endl;
-    cout << "If not, you will loose money."          << endl;
+    cout << "If not, you will lose money."          << endl;
     cout << "How much do you want to bet?"           << endl;
     cout << "Enter your money : "                    ;
     
@@ -40,7 +40,7 @@ int main() {
 
     while ( y < 500) {  
 
-        cout << "Please, enter over $500, and try one more time." << endl;
+        cout << "Please, enter over $500. Try one more time." << endl;
         cout << "Enter your money : ";
         cin  >> y;
     }
@@ -79,7 +79,7 @@ int main() {
         }
         
         else {
-            cout << "See you next time" << endl;
+            cout << "See you next time. Bye." << endl;
             return 0;        
         }
     }
@@ -95,7 +95,7 @@ int main() {
             return main();
         }
         else {
-            cout << "See you next time" << endl;
+            cout << "See you next time. Bye." << endl;
             return 0;        
         }
     }
